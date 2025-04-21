@@ -1,0 +1,460 @@
+.banner{
+  height: 500px;
+  background-color: #f5f5f5;
+}
+.banner .wapper{
+  height: 500px;
+  background-color: pink;
+  position: relative;
+
+}
+.banner .aside{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 500px;
+  background-color: #000000;
+  opacity: 0.8;
+}
+.banner .aside li{
+  height: 50px;
+  line-height: 50px;
+}
+.banner .aside a{
+  height: 50px;
+  display: block;
+  padding-left: 36px;
+  color: #FFFFFF;
+  position: relative;
+}
+.banner .aside a span{
+  margin-left: 15px;
+  font-size: 14px;
+}
+.banner .aside a:hover{
+  background-color: #27BA9B;
+}
+.banner .aside a::after{
+  position: absolute;
+  right: 19px;
+  top: 19px;
+  content: '';
+  width: 6px;
+  height: 11px;
+  background-image: url(设计图/sprites.png);
+  background-position: -80px -110px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 228px;
+  width: 45px;
+  height: 45px;
+  background-color:rgba(0,0,0,0.2);
+  background-image: url(设计图/sprites.png);
+  opacity: 0;
+  border-radius: 50%;
+  transition:opacity 0.5s;
+}
+.banner .wapper:hover a{
+  opacity: 1;
+}
+.prev {
+  left: 260px;
+  background-position: 15px -60px;
+}
+.next {
+  right: 10px;
+  background-position: -25px -60px;
+}
+.banner ol{
+  position: absolute;
+  bottom: 31px;
+  left: 680px;
+  height: 10px;
+}
+.banner ol li{
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  opacity: 0.4;
+  float: left;
+  border-radius: 50%;
+  margin-right: 24px;
+  cursor: pointer;
+}
+.banner ol .current{
+  background-color: #fff;
+}
+/*新鲜好物*/
+.goods .hd{
+  height: 114px;
+  line-height: 114px;
+}
+.goods .hd h2{
+  float: left;
+  height: 114px;
+  font-size: 29px;
+}
+.goods .hd h2 span,
+.fresh .top h2 span,
+.brand .br_top h2 span{
+  font-size: 16px;
+  color: #999999;
+  margin-left: 34px;
+
+}
+.goods .hd a,
+.fresh .top>a,
+.special .sp_top a{
+  float: right;
+  color: #999999;
+}
+.goods .hd a::after,
+.fresh .top>a::after,
+.special .sp_top a::after{
+  content: '';
+  width: 7px;
+  height: 13px;
+  display: inline-block;
+  background-image: url(设计图/sprites.png);
+  background-position: 0 -110px;
+  margin-left: 13px;
+}
+.goods .bd li{
+  width: 304px;
+  height: 405px;
+  background-color: #f0f9f4;
+  float: left;
+  margin-right: 8px;
+  text-align: center;
+  position: relative;
+}
+.goods .bd li:hover{
+  transition:all 0.5s;
+  transform: translate(0,-5px);
+  box-shadow: 1px 1px 1px #0b3b61;
+}
+.goods .bd li:last-child{
+  margin-right: 0;
+}
+.goods .bd li h3{
+  margin-top: 19px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.goods .bd li div{
+  color: #9a2e1f;
+  font-size: 23px;
+}
+.goods .bd li b{
+  position: absolute;
+  left: 18px;
+  top: 17px;
+  width: 28px;
+  height: 51px;
+  border: 1px solid #27ba9b;
+  color: #27ba9b;
+  border-radius: 2px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.fresh .top{
+  height: 95px;
+  line-height: 95px;
+}
+.fresh .top h2{
+  float: left;
+  height: 95px;
+  font-size: 29px;
+}
+.fresh .top ul{
+  float: right;
+}
+.fresh .top li{
+  float: left;
+}
+.fresh .top li a{
+padding: 2px 7px;
+  margin-left: 6px;
+
+}
+.fresh .top li:last-child{
+  margin-right: 65px;
+ }
+.fresh .top li a:hover{
+  background-color: #27ba9b;
+  color: #FFFFFF;
+}
+.fresh .bottom{
+  height: 610px;
+  /*background-color: pink;*/
+}
+.fresh .bottom .left{
+  float: left;
+  width: 240px;
+  height: 610px;
+}
+.fresh .bottom .right ul {
+  width: 1000px;
+  float: right;
+}
+.fresh .bottom li{
+  float: left;
+  width: 242px;
+  height: 304px;
+  margin-left: 8px;
+  position: relative;
+  transition:all .5s;
+  overflow: hidden;
+}
+.fresh .bottom li .extra{
+  height: 86px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -86px;
+  background-color: #27ba9b;
+  transition: bottom 0.3s;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 36px;
+}
+.fresh .bottom li .extra span{
+  display: block;
+  width: 125px;
+  border-top: 1px solid #a9dbcc;
+  font-size: 13px;
+  margin-left: 54px;
+}
+.fresh .bottom li:hover{
+  border: 1px solid #27ba9b;
+}
+.fresh .bottom li:hover .extra{
+  bottom: 0;
+}
+.fresh .bottom li a{
+  display: inline-block;
+  padding-left: 29px;
+  padding-top: 0;
+}
+.fresh .bottom li .mate{
+  width: 166px;
+  height: 87px;
+ padding-left: 29px;
+}
+.fresh .bottom li .mate span{
+  display: block;
+  font-size: 22px;
+  color: #9a2e1f;
+}
+/*电梯导航*/
+.ele{
+  position: fixed;
+  right: 100px;
+  bottom: 100px;
+  width: 40px;
+  height: 50px;
+  background-color: #fff;
+  text-align: center;
+  display: none;
+}
+.ele a:hover{
+  color: #27ba9b;
+ }
+/*滑动动画区域*/
+.brand{
+  height: 466px;
+  background-color: #f5f5f5;
+}
+.brand .br_top{
+  height: 110px;
+  line-height: 110px;
+  position: relative;
+}
+.brand .br_top h2{
+  float: left;
+  height: 110px;
+  font-size: 29px;
+}
+.brand .br_top .br_next{
+  position: absolute;
+  right: 1px;
+  bottom: 7px;
+  width: 20px;
+  height: 20px;
+  background-color: #27ba9b;
+  background-image: url(设计图/sprites.png);
+  background-position: 7px -105px;
+}
+.brand .br_btm li img{
+  width: 224px;
+  height: 306px;
+}
+.brand .br_btm li{
+  float: left;
+  margin-right: 5px;
+}
+.special{
+  height: 512px;
+  background-color: #f5f5f5;
+}
+.special .sp_top {
+  height: 115px;
+  line-height: 115px;
+  background-color: pink;
+}
+.special .sp_top h2{
+  font-size: 29px;
+  float: left;
+}
+.special .sp_btm  li{
+  width: 404px;
+  height: 356px;
+  float: left;
+  background:#FFFFFF url(uploads/topic_goods_1.jpg) no-repeat;
+  background-size: 404px 288px;
+  margin-right: 14px;
+}
+.special .sp_btm  li:last-child{
+  margin-right: 0;
+}
+.special .sp_btm  li .sp_goods{
+  height: 146px;
+  margin-top: 142px;
+}
+.special .sp_btm  li .sp_goods h3{
+  width: 241px;
+  height: 20px;
+  font-size: 20px;
+  color: #FFFFFF;
+  margin-left: 15px;
+  font-weight: 400;
+  padding-top: 80px;
+}
+.special .sp_btm  li .sp_goods  span{
+  font-size: 16px;
+  color: #999999;
+}
+.special .sp_btm  li .sp_text{
+  height: 68px;
+  margin-top: 66px;
+  position: relative;
+}
+.special .sp_btm  li .sp_text .icon1{
+  position: absolute;
+  left: 17px;
+  bottom: 28px;
+  padding-left: 17px;
+}
+.special .sp_btm  li .sp_text .icon1 i{
+  position: absolute;
+  left: 2px;
+  bottom: 4px;
+  width: 15px;
+  height: 13px;
+  background-image: url(设计图/sprites.png);
+  background-position: -120px -110px;
+}
+.special .sp_btm  li .sp_text .icon2{
+  position: absolute;
+  left: 89px;
+  bottom: 28px;
+  padding-left: 17px;
+  margin-left: 24px;
+}
+.special .sp_btm  li .sp_text .icon2 i{
+  position: absolute;
+  left: 2px;
+  bottom: 4px;
+  width: 15px;
+  height: 13px;
+  background-image: url(设计图/sprites.png);
+  background-position: -160px -110px;
+}
+.special .sp_btm  li .sp_text .icon3{
+  position: absolute;
+  left: 341px;
+  bottom: 28px;
+  padding-left: 22px;
+}
+.special .sp_btm  li .sp_text .icon3 i{
+  position: absolute;
+  left: 2px;
+  bottom: 2px;
+  width: 16px;
+  height: 16px;
+  background-image: url(设计图/sprites.png);
+  background-position: -200px -110px;
+}
+/*帮助区域*/
+.help {
+  height: 300px;
+}
+.help .serve{
+  width: 192px;
+  height: 143px;
+  margin-top: 79px;
+  text-align: center;
+  color: #999999;
+  position: relative;
+}
+.help .serve .se_txt1{
+  position: absolute;
+  width: 93px;
+  height: 92px;
+  border: solid 1px #eeeeee;
+  left: 0;
+  bottom: 0;
+}
+.help .serve .se_txt2{
+  position: absolute;
+  width: 93px;
+  height: 92px;
+  border: solid 1px #eeeeee;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+.help .serve  b{
+  position: absolute;
+  bottom: 13px;
+  left: 18px;
+}
+.help .serve .hp_icon1{
+  position: absolute;
+  left: 28px;
+  top: 22px;
+  width: 29px;
+  height: 27px;
+  background-image: url(设计图/sprites.png);
+  background-position: -250px -70px;
+}
+.help .serve .hp_icon2{
+  position: absolute;
+  left: 28px;
+  top: 22px;
+  width: 29px;
+  height: 30px;
+  background-image: url(设计图/sprites.png);
+  background-position: -350px -70px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
